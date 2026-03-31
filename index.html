@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collin George - CMMC, Export Control &amp; Sanctions Compliance Consulting</title>
+<meta name="description" content="Independent CMMC readiness, ITAR/EAR classification, and sanctions compliance consulting for defense contractors and international technology companies. CISSP-certified.">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<style>
+:root {
+  --bg-0: #08090b;
+  --bg-1: #0e1014;
+  --bg-2: #141620;
+  --bg-3: #1a1d2a;
+  --bg-hover: #1f2234;
+  --bdr: #1e2136;
+  --bdr-a: #2a3a5c;
+  --tx-1: #e6e8ec;
+  --tx-2: #8e93a6;
+  --tx-3: #585d70;
+  --ac: #4a7cff;
+  --ac-d: #3460cc;
+  --ac-g: rgba(74,124,255,0.07);
+  --gld: #c4a35a;
+  --gld-bg: rgba(196,163,90,0.11);
+  --f-serif: "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --f-sans: "Avenir Next","Segoe UI","Helvetica Neue",Helvetica,sans-serif;
+  --f-mono: "SF Mono","Cascadia Mono",Consolas,"Liberation Mono",monospace;
+}
+*,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+@media (prefers-reduced-motion:reduce) {
+  html { scroll-behavior:auto; }
+  .fade-in { animation:none !important; opacity:1 !important; transform:none !important; }
+}
+body { font-family:var(--f-sans); background:var(--bg-0); color:var(--tx-1); line-height:1.7; font-size:16px; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+a { color:var(--ac); text-decoration:none; transition:color 0.2s; }
+a:hover { color:var(--tx-1); }
+a:focus-visible { outline:2px solid var(--ac); outline-offset:3px; border-radius:2px; }
+.skip-link { position:absolute; top:-100px; left:16px; background:var(--ac); color:#fff; padding:8px 16px; border-radius:4px; z-index:200; font-size:0.85rem; font-weight:600; }
+.skip-link:focus { top:12px; }
+
+/* NAV */
+nav { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(8,9,11,0.93); -webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px); border-bottom:1px solid var(--bdr); padding:0 2rem; }
+.nav-inner { max-width:1040px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; height:56px; }
+.nav-brand { font-family:var(--f-mono); font-size:0.76rem; font-weight:600; letter-spacing:0.1em; color:var(--tx-2); text-transform:uppercase; }
+.nav-brand b { color:var(--ac); font-weight:600; }
+.nav-links { display:flex; gap:1.6rem; align-items:center; }
+.nav-links a { font-size:0.8rem; font-weight:500; letter-spacing:0.02em; color:var(--tx-2); }
+.nav-links a:hover { color:var(--tx-1); }
+.btn { display:inline-flex; align-items:center; gap:0.4rem; padding:0.44rem 1.1rem; border-radius:4px; font-weight:600; font-size:0.82rem; transition:background 0.2s, color 0.2s; border:none; cursor:pointer; font-family:var(--f-sans); text-decoration:none; }
+.btn-primary { background:var(--ac); color:#fff; }
+.btn-primary:hover { background:var(--ac-d); color:#fff; }
+.btn-ghost { background:transparent; color:var(--tx-2); border:1px solid var(--bdr-a); }
+.btn-ghost:hover { background:var(--ac-g); color:var(--tx-1); border-color:var(--ac); }
+
+/* LAYOUT */
+.wrap { max-width:1040px; margin:0 auto; }
+main section { padding:5rem 2rem; }
+.divider { border:none; border-top:1px solid var(--bdr); max-width:1040px; margin:0 auto; }
+.sl { font-family:var(--f-mono); font-size:0.64rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--ac); margin-bottom:0.9rem; display:flex; align-items:center; gap:0.6rem; }
+.sl::after { content:""; flex:1; height:1px; background:var(--bdr); max-width:160px; }
+section h2 { font-family:var(--f-serif); font-size:1.9rem; font-weight:600; margin-bottom:0.7rem; line-height:1.25; }
+.sd { color:var(--tx-2); max-width:600px; margin-bottom:2.2rem; font-weight:300; line-height:1.8; font-size:0.93rem; }
+
+/* HERO */
+.hero { min-height:100vh; display:flex; align-items:center; padding:7.5rem 2rem 5.5rem; position:relative; overflow:hidden; }
+.hero::after { content:""; position:absolute; top:-25%; right:-12%; width:650px; height:650px; background:radial-gradient(circle,rgba(74,124,255,0.03) 0%,transparent 70%); pointer-events:none; }
+.hero-label { font-family:var(--f-mono); font-size:0.66rem; letter-spacing:0.16em; color:var(--tx-3); text-transform:uppercase; margin-bottom:2.2rem; display:flex; align-items:center; gap:0.6rem; }
+.hero-label::before { content:""; width:18px; height:1px; background:var(--bdr-a); }
+.hero h1 { font-family:var(--f-serif); font-size:clamp(2.2rem,4.8vw,3.4rem); font-weight:600; line-height:1.18; margin-bottom:1.4rem; max-width:700px; }
+.hero h1 em { font-style:italic; color:var(--ac); }
+.hero-sub { font-size:0.98rem; color:var(--tx-2); max-width:560px; line-height:1.8; margin-bottom:1.3rem; font-weight:300; }
+.hero-fit { font-size:0.84rem; color:var(--tx-3); max-width:560px; line-height:1.7; margin-bottom:2.2rem; font-weight:300; font-style:italic; border-left:2px solid var(--bdr-a); padding-left:1rem; }
+.hero-ctas { display:flex; gap:0.8rem; flex-wrap:wrap; margin-bottom:2.4rem; }
+.proof-strip { display:flex; gap:1.6rem; flex-wrap:wrap; padding:1rem 0; border-top:1px solid var(--bdr); }
+.proof-item { font-family:var(--f-mono); font-size:0.66rem; letter-spacing:0.04em; color:var(--tx-3); display:flex; align-items:center; gap:0.4rem; }
+.proof-dot { width:5px; height:5px; border-radius:50%; background:var(--ac); opacity:0.5; }
+
+/* CARDS */
+.grid-3 { display:grid; grid-template-columns:repeat(auto-fit,minmax(295px,1fr)); gap:1rem; }
+.grid-2 { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1rem; }
+.grid-del { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:0.9rem; }
+.card { background:var(--bg-2); border:1px solid var(--bdr); border-radius:5px; padding:1.7rem; transition:border-color 0.2s, background 0.2s, transform 0.2s; position:relative; overflow:hidden; }
+.card:hover { border-color:var(--bdr-a); background:var(--bg-hover); transform:translateY(-1px); }
+.card::before { content:""; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,var(--ac),transparent); opacity:0; transition:opacity 0.2s; }
+.card:hover::before { opacity:1; }
+.tag { display:inline-block; font-family:var(--f-mono); font-size:0.58rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gld); background:var(--gld-bg); padding:0.18rem 0.45rem; border-radius:2px; margin-bottom:0.7rem; }
+.card h3 { font-size:0.92rem; font-weight:600; margin-bottom:0.4rem; }
+.card p { font-size:0.83rem; color:var(--tx-2); line-height:1.65; font-weight:300; }
+.card-detail { margin-top:0.7rem; font-family:var(--f-mono); font-size:0.66rem; color:var(--tx-3); letter-spacing:0.02em; }
+.card-detail em { font-style:normal; color:var(--tx-2); }
+.client-card { border-left:2px solid var(--bdr-a); padding:1.1rem 1.4rem; background:var(--bg-2); border-radius:0 5px 5px 0; }
+.client-card h3 { font-size:0.9rem; font-weight:600; margin-bottom:0.35rem; }
+.client-card p { font-size:0.83rem; color:var(--tx-2); line-height:1.65; font-weight:300; }
+.del-item { padding:1.1rem; background:var(--bg-2); border:1px solid var(--bdr); border-radius:5px; }
+.del-item h4 { font-size:0.8rem; font-weight:600; margin-bottom:0.25rem; }
+.del-item p { font-size:0.76rem; color:var(--tx-3); line-height:1.55; }
+
+/* ENGAGEMENTS */
+.eng-item { padding:1.6rem; background:var(--bg-2); border:1px solid var(--bdr); border-radius:5px; }
+.eng-item h3 { font-size:0.9rem; font-weight:600; margin-bottom:0.4rem; color:var(--tx-1); }
+.eng-item .eng-type { font-family:var(--f-mono); font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ac); margin-bottom:0.5rem; }
+.eng-item p { font-size:0.83rem; color:var(--tx-2); line-height:1.65; font-weight:300; }
+.eng-item .eng-del { margin-top:0.6rem; font-size:0.78rem; color:var(--tx-3); font-weight:300; }
+
+/* RESEARCH */
+.research-list { display:flex; flex-direction:column; }
+.ri { display:grid; grid-template-columns:1fr auto; align-items:start; gap:1.3rem; padding:1.2rem 0; border-bottom:1px solid var(--bdr); transition:padding-left 0.2s; }
+.ri:first-child { border-top:1px solid var(--bdr); }
+.ri:hover { padding-left:0.7rem; }
+.ri h3 { font-family:var(--f-serif); font-size:1rem; font-weight:500; margin-bottom:0.2rem; }
+.ri h3 a { color:var(--tx-1); }
+.ri h3 a:hover { color:var(--ac); }
+.ri-meta { font-size:0.78rem; color:var(--tx-3); font-weight:300; }
+.ri-tag { font-family:var(--f-mono); font-size:0.68rem; color:var(--tx-3); letter-spacing:0.03em; white-space:nowrap; padding-top:0.1rem; }
+
+/* ABOUT */
+.about-grid { display:grid; grid-template-columns:5fr 3fr; gap:3rem; align-items:start; }
+.about-text p { color:var(--tx-2); margin-bottom:0.9rem; font-weight:300; line-height:1.8; font-size:0.9rem; }
+.aside { border-left:1px solid var(--bdr); padding-left:1.6rem; }
+.aside h4 { font-family:var(--f-mono); font-size:0.62rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--tx-3); margin-bottom:0.5rem; margin-top:1.3rem; }
+.aside h4:first-child { margin-top:0; }
+.aside ul { list-style:none; margin-bottom:0.4rem; }
+.aside li { font-size:0.82rem; color:var(--tx-2); padding:0.2rem 0; font-weight:300; }
+
+/* CONTACT */
+.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:2rem; align-items:start; }
+.cblock { background:var(--bg-2); border:1px solid var(--bdr); border-radius:5px; padding:2rem; }
+.cblock h3 { font-family:var(--f-serif); font-size:1.25rem; font-weight:500; margin-bottom:0.7rem; }
+.cblock p { color:var(--tx-2); font-weight:300; line-height:1.7; font-size:0.88rem; margin-bottom:0.8rem; }
+.cform { display:flex; flex-direction:column; gap:0.7rem; }
+.cform label { font-size:0.72rem; font-weight:500; color:var(--tx-3); letter-spacing:0.04em; text-transform:uppercase; font-family:var(--f-mono); }
+.cform input, .cform select, .cform textarea { background:var(--bg-1); border:1px solid var(--bdr); border-radius:3px; padding:0.55rem 0.75rem; color:var(--tx-1); font-family:var(--f-sans); font-size:0.86rem; transition:border-color 0.2s; width:100%; }
+.cform input:focus, .cform select:focus, .cform textarea:focus { outline:none; border-color:var(--ac); }
+.cform textarea { resize:vertical; min-height:72px; }
+.cform select { appearance:auto; }
+.cform .hp { position:absolute; left:-9999px; }
+.intake-notice { font-size:0.72rem; color:var(--tx-3); line-height:1.6; margin-top:0.5rem; font-weight:300; border-top:1px solid var(--bdr); padding-top:0.6rem; }
+.c-aside p { color:var(--tx-3); font-size:0.82rem; line-height:1.7; font-weight:300; }
+.c-aside h4 { font-family:var(--f-mono); font-size:0.62rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--tx-3); margin-bottom:0.4rem; margin-top:1.3rem; }
+.c-aside h4:first-child { margin-top:0; }
+
+/* LEGAL PAGES */
+.legal { padding:5rem 2rem 3rem; }
+.legal-content { max-width:680px; }
+.legal-content h2 { font-family:var(--f-serif); font-size:1.6rem; margin-bottom:1rem; }
+.legal-content h3 { font-size:0.95rem; font-weight:600; margin-top:1.5rem; margin-bottom:0.4rem; }
+.legal-content p { color:var(--tx-2); font-size:0.88rem; line-height:1.8; font-weight:300; margin-bottom:0.8rem; }
+
+/* FOOTER */
+footer { padding:2.2rem 2rem; max-width:1040px; margin:0 auto; border-top:1px solid var(--bdr); display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem; }
+.ft-text { font-size:0.72rem; color:var(--tx-3); font-weight:300; line-height:1.7; max-width:480px; }
+.ft-links { display:flex; gap:1.2rem; flex-wrap:wrap; }
+.ft-links a { font-size:0.72rem; color:var(--tx-3); }
+.ft-links a:hover { color:var(--tx-2); }
+
+
+/* METHODOLOGY DETAIL */
+.meth-text { font-size:0.88rem; color:var(--tx-2); line-height:1.8; font-weight:300; margin-bottom:0.8rem; }
+.meth-summary-label { font-family:var(--f-mono); font-size:0.62rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--tx-3); margin-bottom:0.5rem; }
+.meth-summary { font-size:0.84rem; color:var(--tx-2); line-height:1.8; font-weight:300; }
+.meth-grid { margin-bottom:2rem; }
+.degree-detail { font-size:0.76rem; color:var(--tx-3); }
+.mono-email { font-family:var(--f-mono); font-size:0.8rem; }
+.mt-sm { margin-top:0.3rem; align-self:flex-start; }
+.mt-section { margin-top:2.2rem; }
+/* TRUST BAND */
+.trust-band { display:flex; gap:1.6rem; flex-wrap:wrap; padding:1.2rem 1.6rem; background:var(--bg-2); border:1px solid var(--bdr); border-radius:5px; margin-bottom:1.5rem; }
+.trust-item { font-size:0.78rem; color:var(--tx-2); font-weight:300; display:flex; align-items:center; gap:0.4rem; }
+.trust-check { color:var(--ac); font-size:0.9rem; }
+
+/* ANIM */
+.fade-in { opacity:0; transform:translateY(12px); animation:fadeIn 0.45s ease forwards; }
+.fade-in:nth-child(2) { animation-delay:0.08s; }
+.fade-in:nth-child(3) { animation-delay:0.14s; }
+.fade-in:nth-child(4) { animation-delay:0.18s; }
+.fade-in:nth-child(5) { animation-delay:0.22s; }
+.fade-in:nth-child(6) { animation-delay:0.26s; }
+.fade-in:nth-child(7) { animation-delay:0.3s; }
+@keyframes fadeIn { to { opacity:1; transform:translateY(0); } }
+
+/* RESPONSIVE */
+@media (max-width:768px) {
+  .hero { padding:6rem 1.5rem 3rem; min-height:auto; }
+  .hero h1 { font-size:1.9rem; }
+  main section { padding:3.2rem 1.5rem; }
+  .about-grid { grid-template-columns:1fr; gap:1.8rem; }
+  .aside { border-left:none; border-top:1px solid var(--bdr); padding-left:0; padding-top:1.3rem; }
+  .grid-3, .grid-2 { grid-template-columns:1fr; }
+  .grid-del { grid-template-columns:1fr 1fr; }
+  .contact-grid { grid-template-columns:1fr; }
+  .nav-links a:not(.btn-primary) { display:none; }
+  .nav-links { gap:0.8rem; }
+  .ri { grid-template-columns:1fr; gap:0.3rem; }
+  footer { flex-direction:column; }
+  .proof-strip { gap:1rem; }
+  .legal { padding:6rem 1.5rem 2rem; }
+}
+@media (max-width:480px) {
+  .grid-del { grid-template-columns:1fr; }
+  .hero-ctas { flex-direction:column; }
+  .hero-ctas .btn { justify-content:center; }
+}
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<nav aria-label="Primary navigation">
+  <div class="nav-inner">
+    <div class="nav-brand"><b>CG</b> &mdash; Collin George</div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#engagements">Engagements</a>
+      <a href="#methodology">Methodology</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="btn btn-primary">Request Consultation</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="wrap">
+    <div class="hero-label fade-in">CMMC &middot; Export Controls &middot; Sanctions Compliance</div>
+    <h1 id="hero-heading" class="fade-in">What you need to <em>pass your CMMC assessment</em> and keep your contracts.</h1>
+    <p class="hero-sub fade-in">Fixed-scope CMMC Level 2 readiness assessments for defense contractors that need a clear path to certification, remediation prioritization, and contract continuity. ITAR/EAR and sanctions review integrated when required.</p>
+    <p class="hero-fit fade-in">For defense contractors, biotech firms, advanced technology companies, and outside counsel facing cybersecurity, export-control, or sanctions compliance requirements.</p>
+    <div class="hero-ctas fade-in">
+      <a href="#contact" class="btn btn-primary">Request Consultation</a>
+      <a href="#engagements" class="btn btn-ghost">View Representative Engagements</a>
+    </div>
+    <div class="proof-strip fade-in">
+      <span class="proof-item"><span class="proof-dot"></span> CISSP-certified, (ISC)&sup2;</span>
+      <span class="proof-item"><span class="proof-dot"></span> Published open-source analytical methodology</span>
+      <span class="proof-item"><span class="proof-dot"></span> Fixed-fee and retainer engagements</span>
+      <span class="proof-item"><span class="proof-dot"></span> Nationwide remote availability</span>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- SERVICES -->
+<section id="services" aria-labelledby="services-heading">
+  <div class="wrap">
+    <div class="sl">Services</div>
+    <h2 id="services-heading">What I deliver</h2>
+    <p class="sd">Fixed-scope assessments, retainer-based compliance management, and technical advisory. Final fees depend on scope, document volume, and required turnaround.</p>
+    <div class="grid-3">
+      <div class="card">
+        <div class="tag">Flagship &middot; Entry Engagement</div>
+        <h3>CMMC Level 2 Readiness Assessment</h3>
+        <p>Full assessment against NIST SP 800-171 Rev 2. Gap matrix, SSP outline, POA&amp;M, priority remediation roadmap. Integrated with ITAR handling controls where applicable.</p>
+        <div class="card-detail"><em>Fixed fee</em> &middot; 4&ndash;6 weeks &middot; Deliverables defined at scoping</div>
+      </div>
+      <div class="card">
+        <div class="tag">Triggered &middot; Follow-On</div>
+        <h3>ITAR/EAR Classification &amp; Compliance</h3>
+        <p>ECCN and USML commodity jurisdiction determinations. Deemed export risk assessments. Technology Control Plans. Voluntary Self-Disclosure preparation.</p>
+        <div class="card-detail"><em>Fixed fee</em> &middot; 2&ndash;4 weeks</div>
+      </div>
+      <div class="card">
+        <div class="tag">Triggered &middot; Follow-On</div>
+        <h3>Sanctions Compliance Program Design</h3>
+        <p>OFAC compliance frameworks aligned with the 2019 Framework for Compliance Commitments. Counterparty risk mapping. Screening program architecture and testing.</p>
+        <div class="card-detail"><em>Fixed fee</em> &middot; 4&ndash;10 weeks</div>
+      </div>
+      <div class="card">
+        <div class="tag">Advanced</div>
+        <h3>CFIUS Cybersecurity Risk Assessment</h3>
+        <p>Pre-filing cybersecurity risk assessments for transactions subject to CFIUS review. Network architecture analysis, data flow mapping, mitigation agreement compliance.</p>
+        <div class="card-detail"><em>Hourly advisory</em> &middot; 2&ndash;6 weeks</div>
+      </div>
+      <div class="card">
+        <div class="tag">Retainer</div>
+        <h3>Virtual CISO</h3>
+        <p>Part-time security leadership. Risk assessment, policy development, incident response planning, board-level reporting, and regulatory engagement. 15&ndash;25 hours/month.</p>
+        <div class="card-detail"><em>Monthly retainer</em> &middot; Ongoing</div>
+      </div>
+      <div class="card">
+        <div class="tag">Advanced</div>
+        <h3>Technical Advisory for Counsel</h3>
+        <p>Technical analysis supporting litigation teams on cybersecurity standards of care, export control matters, sanctions compliance disputes, and digital forensics.</p>
+        <div class="card-detail"><em>Hourly advisory</em> &middot; Per engagement</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- REPRESENTATIVE ENGAGEMENTS -->
+<section id="engagements" aria-labelledby="eng-heading">
+  <div class="wrap">
+    <div class="sl">Representative Engagements</div>
+    <h2 id="eng-heading">What this looks like in practice</h2>
+    <p class="sd">Anonymized engagement patterns illustrating typical scope, deliverables, and outcomes. No client-identifying information is disclosed.</p>
+    <div class="grid-2">
+      <div class="eng-item">
+        <div class="eng-type">CMMC + ITAR Integration</div>
+        <h3>Defense subcontractor preparing for Level 2 certification while handling export-controlled technical data</h3>
+        <p>Small electronics manufacturer (under 200 employees) with active DoD subcontracts required CMMC Level 2 readiness while also handling ITAR-controlled design files shared by the prime contractor. Assessment identified 34 control gaps, three ITAR handling deficiencies, and an undocumented CUI data flow to a cloud environment.</p>
+        <div class="eng-del">Deliverables: Gap matrix, SSP, POA&amp;M, CUI boundary diagram, ITAR handling control recommendations, remediation priority roadmap.</div>
+      </div>
+      <div class="eng-item">
+        <div class="eng-type">Biotech Export Control Review</div>
+        <h3>Biotech firm with foreign national research staff requiring deemed export analysis</h3>
+        <p>Mid-market biotech company (300+ employees) with R&amp;D staff holding citizenship in countries subject to EAR restrictions. Required deemed export analysis for controlled technology access, controlled technology segmentation, and a Technology Control Plan satisfying BIS requirements.</p>
+        <div class="eng-del">Deliverables: Deemed export risk assessment, ECCN classification memos for three product lines, Technology Control Plan, staff briefing materials.</div>
+      </div>
+      <div class="eng-item">
+        <div class="eng-type">CFIUS Diligence Support</div>
+        <h3>Transaction counsel requiring cybersecurity risk analysis for foreign acquisition review</h3>
+        <p>Outside counsel retained for CFIUS filing needed technical cybersecurity risk analysis for a cross-border acquisition involving a company with access to controlled unclassified information. Required network architecture review, data flow assessment, and a concise risk memo suitable for inclusion in the filing.</p>
+        <div class="eng-del">Deliverables: Cybersecurity risk assessment, data flow diagram, mitigation recommendation memo, architecture narrative for counsel.</div>
+      </div>
+      <div class="eng-item">
+        <div class="eng-type">Sanctions Compliance Architecture</div>
+        <h3>Technology firm with international counterparty exposure requiring OFAC screening program</h3>
+        <p>Software company expanding into markets with sanctions-adjacent counterparty risk. Required a compliance framework aligned with OFAC guidance, including screening architecture, escalation protocols, and a control matrix covering nine counterparty risk categories.</p>
+        <div class="eng-del">Deliverables: OFAC compliance framework, screening program architecture, escalation decision tree, control matrix, staff training materials.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- WHO I HELP -->
+<section aria-labelledby="clients-heading">
+  <div class="wrap">
+    <div class="sl">Who I Help</div>
+    <h2 id="clients-heading">Typical clients</h2>
+    <p class="sd">Organizations where cybersecurity compliance intersects with export controls, sanctions law, or foreign investment requirements.</p>
+    <div class="grid-3">
+      <div class="client-card">
+        <h3>Small defense contractors</h3>
+        <p>Machine shops, electronics manufacturers, and software subcontractors (50&ndash;500 employees) facing CMMC Level 2 deadlines with no dedicated compliance staff. Typical pain: a contract-gating CMMC requirement with no clear path to assessment readiness.</p>
+      </div>
+      <div class="client-card">
+        <h3>Biotech and technology firms</h3>
+        <p>Companies with international operations, foreign national R&amp;D employees, or dual-use products requiring ITAR/EAR classification, deemed export analysis, and sanctions screening programs.</p>
+      </div>
+      <div class="client-card">
+        <h3>Outside counsel and PE/VC funds</h3>
+        <p>Law firms needing technical cybersecurity analysis for CFIUS filings or export control matters. Investment funds requiring cybersecurity due diligence on acquisition targets in defense, biotech, or technology sectors.</p>
+      </div>
+    </div>
+    <div class="mt-section">
+      <div class="sl">Typical Deliverables</div>
+      <div class="grid-del">
+        <div class="del-item"><h4>SSP &amp; POA&amp;M Package</h4><p>System Security Plan and Plan of Action and Milestones for C3PAO assessment readiness.</p></div>
+        <div class="del-item"><h4>Classification Memo</h4><p>ECCN/USML jurisdiction and classification determination with supporting rationale.</p></div>
+        <div class="del-item"><h4>Technology Control Plan</h4><p>Deemed export controls for foreign national employees accessing controlled technology.</p></div>
+        <div class="del-item"><h4>Sanctions Control Framework</h4><p>OFAC compliance architecture with screening, escalation, and audit procedures.</p></div>
+        <div class="del-item"><h4>Transaction Risk Memo</h4><p>CFIUS cybersecurity risk assessment and mitigation recommendation for M&amp;A transactions.</p></div>
+        <div class="del-item"><h4>Board Security Briefing</h4><p>Executive-level risk assessment and compliance status report for retainer clients.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- METHODOLOGY / PROOF -->
+<section id="methodology" aria-labelledby="meth-heading">
+  <div class="wrap">
+    <div class="sl">Methodology &amp; Published Research</div>
+    <h2 id="meth-heading">How the work gets done</h2>
+    <p class="sd">Published open-source analytical work supporting the sanctions, export-control, and risk-assessment methodology used in client engagements. Available for review before the first call.</p>
+
+    <div class="grid-2 meth-grid">
+      <div >
+        <p class="meth-text">Every compliance assessment, classification review, and risk analysis delivered by this practice follows the same analytical methodology documented in the WP-2026 research series: dual-axis probability and confidence labeling, explicit statement of limits and unknowns, structured evidence tiers, and prohibition on advocacy language.</p>
+        <p class="meth-text">The series was produced between January 15 and March 28, 2026. Full provenance is available via <a href="https://github.com/collingeorge/WP-2026">GitHub commit history</a>.</p>
+      </div>
+      <div>
+        <div class="meth-summary-label">Corpus Summary</div>
+        <div class="meth-summary">
+          62 documents across 10 analytical domains<br>
+          374 georeferenced enforcement nodes<br>
+          Interactive global enforcement map<br>
+          Three documented red-team audit passes<br>
+          Structured using ODNI analytic tradecraft principles<br>
+          Licensed under CC BY 4.0
+        </div>
+      </div>
+    </div>
+
+    <div class="research-list">
+      <div class="ri"><div><h3><a href="https://github.com/collingeorge/WP-2026">SIEGE-01 &mdash; Multi-Channel Financial Denial Framework</a></h3><div class="ri-meta">Seven-channel simultaneous pressure architecture with network classification and falsifiable indicators.</div></div><div class="ri-tag">Core Framework</div></div>
+      <div class="ri"><div><h3><a href="https://github.com/collingeorge/WP-2026">AML-01 &mdash; Illicit Finance Node Control Matrix</a></h3><div class="ri-meta">20 node types, nine illicit finance categories, eight-column control structure. Three-pass statutory audit.</div></div><div class="ri-tag">Methodology</div></div>
+      <div class="ri"><div><h3><a href="https://github.com/collingeorge/WP-2026">PERSIST-01 &mdash; Litigation-Resilient Statecraft Architecture</a></h3><div class="ri-meta">Six authority rails, four-tier standards of proof, neutral designation-selection rule.</div></div><div class="ri-tag">Strategic Architecture</div></div>
+      <div class="ri"><div><h3><a href="https://github.com/collingeorge/WP-2026">SENI-01 &mdash; Strategic Enforcement Node Index</a></h3><div class="ri-meta">374-node global sanctions enforcement targeting register with interactive georeferenced map.</div></div><div class="ri-tag">374 Nodes</div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ABOUT -->
+<section id="about" aria-labelledby="about-heading">
+  <div class="wrap">
+    <div class="sl">About</div>
+    <h2 id="about-heading">Collin George</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Independent cybersecurity and compliance consultant. Founder, Center for Competitive Statecraft and Strategic Policy&mdash;an independent research initiative producing open-source policy analysis on sanctions enforcement, financial intelligence, and competitive statecraft.</p>
+        <p>Professional background in cybersecurity engineering and international trade compliance across biotech and technology sectors. Graduate coursework in intelligence analysis (Johns Hopkins University) and security studies (University of Central Florida, 3.875 graduate GPA). Clinical Laboratory Technician at the University of Washington Medical Center, Department of Laboratory Medicine and Pathology.</p>
+        <p>The analytical methodology documented in the WP-2026 series is applied directly in client engagements. Compliance assessments, classification reviews, and risk analyses follow the same structured evidence standards, confidence labeling, and explicit limits that govern the published research.</p>
+      </div>
+      <div class="aside">
+        <h4>Certifications</h4>
+        <ul>
+          <li>CISSP &mdash; (ISC)&sup2;</li>
+          <li>BS Cybersecurity, Summa Cum Laude<br><span class="degree-detail">Columbia Basin College, 2019</span></li>
+        </ul>
+        <h4>Graduate Coursework</h4>
+        <ul>
+          <li>Intelligence Analysis &mdash; Johns Hopkins University</li>
+          <li>Security Studies &mdash; University of Central Florida (3.875 GPA)</li>
+        </ul>
+        <h4>Research Identifiers</h4>
+        <ul>
+          <li><a href="https://orcid.org/0009-0007-8162-6839">ORCID: 0009-0007-8162-6839</a></li>
+          <li><a href="https://github.com/collingeorge">GitHub: collingeorge</a></li>
+        </ul>
+        <h4>Regulatory Domains</h4>
+        <ul>
+          <li>CMMC / NIST 800-171</li>
+          <li>ITAR / EAR / BIS Entity List</li>
+          <li>OFAC / Sanctions / AML-BSA</li>
+          <li>CFIUS / FIRRMA</li>
+          <li>IEEPA / CAATSA / ECRA</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CONTACT -->
+<section id="contact" aria-labelledby="contact-heading">
+  <div class="wrap">
+    <div class="sl">Contact</div>
+    <h2 id="contact-heading">Request a confidential consultation</h2>
+    <div class="trust-band">
+      <span class="trust-item"><span class="trust-check">&#10003;</span> Fixed-fee scoping</span>
+      <span class="trust-item"><span class="trust-check">&#10003;</span> Two-business-day response</span>
+      <span class="trust-item"><span class="trust-check">&#10003;</span> Secure communication available</span>
+      <span class="trust-item"><span class="trust-check">&#10003;</span> No sensitive materials via web form</span>
+    </div>
+    <div class="contact-grid">
+      <div class="cblock">
+        <h3>Engagement inquiry</h3>
+        <p>Describe your compliance requirement. I will respond within two business days with an initial assessment of scope, timeline, and fit. Initial scoping call at no charge.</p>
+        <form class="cform" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <label for="f-name">Name</label>
+          <input type="text" id="f-name" name="name" required autocomplete="name">
+          <label for="f-org">Organization</label>
+          <input type="text" id="f-org" name="organization" autocomplete="organization">
+          <label for="f-email">Email</label>
+          <input type="email" id="f-email" name="email" required autocomplete="email">
+          <label for="f-need">What do you need help with?</label>
+          <select id="f-need" name="service_type">
+            <option value="">Select engagement type</option>
+            <option value="cmmc">CMMC readiness assessment</option>
+            <option value="itar">ITAR/EAR classification or compliance</option>
+            <option value="sanctions">Sanctions compliance program</option>
+            <option value="cfius">CFIUS cybersecurity risk assessment</option>
+            <option value="vciso">Virtual CISO retainer</option>
+            <option value="litigation">Technical advisory for counsel</option>
+            <option value="other">Other or unsure</option>
+          </select>
+          <label for="f-details">Brief description</label>
+          <textarea id="f-details" name="details" rows="4" placeholder="Timeline, scope, or questions"></textarea>
+          <!-- honeypot -->
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit" class="btn btn-primary mt-sm">Request Confidential Consultation</button>
+        </form>
+        <div class="intake-notice">
+          <strong>Important:</strong> Do not submit classified, export-controlled, privileged, or otherwise restricted information through this form. Limit submissions to high-level scoping information. Submission of this form does not create a consulting engagement, confidentiality obligation, or attorney-client relationship absent a signed engagement agreement.
+        </div>
+      </div>
+      <div class="c-aside">
+        <h4>Response time</h4>
+        <p>Initial response within two business days. Scoping proposals typically delivered within one week of discovery call.</p>
+        <h4>Engagement format</h4>
+        <p>Fixed-fee project engagements and monthly retainers. Fully remote with nationwide availability. Initial scoping call at no charge.</p>
+        <h4>Secure communication</h4>
+        <p>Encrypted communication is available for sensitive inquiries. Contact via the form to initiate.</p>
+        <h4>Direct email</h4>
+        <p class="mono-email">cgeorge [at] collinbgeorge.com</p>
+        <h4>Scope of services</h4>
+        <p>Services are advisory in nature and do not constitute legal advice. Where regulatory interpretation or legal determinations are required, coordination with qualified legal counsel is recommended.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- PRIVACY -->
+<section id="privacy" class="legal" aria-labelledby="privacy-heading">
+  <div class="wrap">
+    <div class="legal-content">
+      <h2 id="privacy-heading">Privacy Notice</h2>
+      <p><em>Last updated: March 2026</em></p>
+      <h3>Information collected</h3>
+      <p>This site collects only information you voluntarily submit through the contact form: name, organization, email address, engagement type, and description of inquiry. No cookies, tracking pixels, analytics scripts, or third-party advertising tools are used on this site.</p>
+      <h3>Use of information</h3>
+      <p>Information submitted through the contact form is used solely to respond to your inquiry and, if mutually agreed, to scope a potential engagement. Information is not sold, shared with third parties for marketing purposes, or used for any purpose other than responding to your inquiry.</p>
+      <h3>Data handling</h3>
+      <p>Form submissions are processed through a third-party form handler (currently Formspree). Submissions are retained only as long as necessary to respond to your inquiry. You may request deletion of your submitted information at any time by contacting cgeorge [at] collinbgeorge.com.</p>
+      <h3>External dependencies</h3>
+      <p>This site loads no external fonts, analytics, or tracking scripts. All styling is self-contained. The only external request initiated by this site is the form submission handler.</p>
+      <h3>Contact</h3>
+      <p>For privacy-related questions: cgeorge [at] collinbgeorge.com.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TERMS -->
+<section id="terms" class="legal" aria-labelledby="terms-heading">
+  <div class="wrap">
+    <div class="legal-content">
+      <h2 id="terms-heading">Terms &amp; Disclaimer</h2>
+      <p><em>Last updated: March 2026</em></p>
+      <h3>Nature of services</h3>
+      <p>Services provided by Collin George Consulting are advisory in nature and do not constitute legal advice, operational guidance, or a recommendation to any government authority. Where regulatory interpretation or legal determinations are required, coordination with qualified legal counsel is recommended.</p>
+      <h3>No guarantee of regulatory outcome</h3>
+      <p>Advisory services are designed to reduce the risk of compliance deficiencies but do not guarantee any specific regulatory outcome, certification result, or enforcement disposition. All engagement deliverables include explicit scope limitations.</p>
+      <h3>Confidentiality</h3>
+      <p>Submission of the contact form does not create a consulting engagement, confidentiality obligation, or attorney-client relationship absent a signed engagement agreement. Do not submit classified, export-controlled, privileged, or otherwise restricted information through the contact form.</p>
+      <h3>Published research</h3>
+      <p>The WP-2026 research series is independent academic and policy research licensed under CC BY 4.0. It does not constitute legal advice, operational guidance, or a recommendation to any government authority. No inference should be made regarding classified capabilities, intelligence sources, or non-public operational methods.</p>
+      <h3>Professional liability</h3>
+      <p>The practice intends to maintain professional liability (errors and omissions) insurance appropriate to the scope of services offered. Insurance status and coverage details are available upon request during engagement scoping.</p>
+      <h3>Affiliation</h3>
+      <p>Collin George Consulting is an independent practice. It is not affiliated with any government agency, academic institution, or defense contractor. The Center for Competitive Statecraft and Strategic Policy is an independent research initiative founded by Collin George.</p>
+      <h3>Contact</h3>
+      <p>For questions about these terms: cgeorge [at] collinbgeorge.com.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="ft-text">&copy; 2026 Collin George. All rights reserved. Independent practice; not affiliated with any government agency or academic institution. Services are advisory in nature and do not constitute legal advice. No guarantee of regulatory outcome is expressed or implied.</div>
+  <div class="ft-links">
+    <a href="https://github.com/collingeorge/WP-2026">GitHub</a>
+    <a href="https://orcid.org/0009-0007-8162-6839">ORCID</a>
+    <a href="#privacy">Privacy Notice</a>
+    <a href="#terms">Terms &amp; Disclaimer</a>
+  </div>
+</footer>
+
+</body>
+</html>
