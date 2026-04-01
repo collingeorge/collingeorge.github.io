@@ -170,6 +170,44 @@ footer { padding:2.2rem 2rem; max-width:1040px; margin:0 auto; border-top:1px so
 .trust-item { font-size:0.78rem; color:var(--tx-2); font-weight:300; display:flex; align-items:center; gap:0.4rem; }
 .trust-check { color:var(--ac); font-size:0.9rem; }
 
+
+/* RISK FRAMING */
+.risk-frame { background:var(--bg-2); border:1px solid var(--bdr); border-left:3px solid #c4503a; border-radius:5px; padding:2rem 2.2rem; margin-bottom:0; }
+.risk-frame h3 { font-family:var(--f-mono); font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; color:#c4503a; margin-bottom:0.6rem; }
+.risk-frame p { font-size:0.88rem; color:var(--tx-2); line-height:1.7; font-weight:300; margin-bottom:0.8rem; }
+.risk-bullets { list-style:none; }
+.risk-bullets li { font-size:0.84rem; color:var(--tx-2); padding:0.35rem 0; font-weight:300; display:flex; align-items:baseline; gap:0.5rem; }
+.risk-bullets li::before { content:"\2192"; color:#c4503a; font-weight:600; flex-shrink:0; }
+.risk-bullets strong { color:var(--tx-1); font-weight:600; }
+/* ANALYSIS SECTION */
+.analysis-card { background:var(--bg-2); border:1px solid var(--bdr); border-radius:5px; padding:2rem; }
+.analysis-card h3 { font-family:var(--f-serif); font-size:1.15rem; font-weight:600; margin-bottom:0.3rem; }
+.analysis-card .analysis-sub { font-size:0.88rem; color:var(--tx-2); font-style:italic; margin-bottom:1rem; font-weight:300; }
+.analysis-links { display:flex; gap:0.8rem; margin-bottom:1.2rem; flex-wrap:wrap; }
+.finding { font-size:0.83rem; color:var(--tx-2); line-height:1.65; font-weight:300; padding:0.4rem 0; border-bottom:1px solid var(--bdr); }
+.finding:last-child { border-bottom:none; }
+/* FAIL CONDITIONS */
+.fail-list { list-style:none; }
+.fail-list li { font-size:0.86rem; color:var(--tx-2); padding:0.5rem 0; font-weight:300; display:flex; align-items:baseline; gap:0.6rem; border-bottom:1px solid var(--bdr); }
+.fail-list li:last-child { border-bottom:none; }
+.fail-list li::before { content:"\2717"; color:#c4503a; font-weight:700; flex-shrink:0; font-size:0.9rem; }
+.fail-close { margin-top:1rem; font-size:0.84rem; color:var(--tx-3); font-style:italic; font-weight:300; line-height:1.7; }
+/* DIAGNOSTIC */
+.diag-card { background:var(--bg-2); border:1px solid var(--bdr-a); border-radius:5px; padding:2rem; }
+.diag-card h3 { font-size:1rem; font-weight:600; margin-bottom:0.5rem; }
+.diag-card p { font-size:0.86rem; color:var(--tx-2); line-height:1.7; font-weight:300; margin-bottom:0.8rem; }
+.diag-outputs { list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:0.4rem 1.2rem; margin-bottom:1.2rem; }
+.diag-outputs li { font-size:0.82rem; color:var(--tx-2); font-weight:300; padding:0.2rem 0; display:flex; align-items:center; gap:0.4rem; }
+.diag-outputs li::before { content:"\2713"; color:var(--ac); font-size:0.8rem; }
+@media (max-width:480px) { .diag-outputs { grid-template-columns:1fr; } }
+/* ENGAGEMENT MODEL */
+.eng-steps { display:grid; grid-template-columns:repeat(4,1fr); gap:0.8rem; }
+.eng-step { background:var(--bg-2); border:1px solid var(--bdr); border-radius:5px; padding:1.3rem; text-align:center; position:relative; }
+.eng-step-num { font-family:var(--f-mono); font-size:1.6rem; font-weight:700; color:var(--ac); opacity:0.3; margin-bottom:0.3rem; }
+.eng-step h4 { font-size:0.82rem; font-weight:600; line-height:1.4; }
+@media (max-width:768px) { .eng-steps { grid-template-columns:1fr 1fr; } }
+@media (max-width:480px) { .eng-steps { grid-template-columns:1fr; } }
+
 /* ANIM */
 .fade-in { opacity:0; transform:translateY(12px); animation:fadeIn 0.45s ease forwards; }
 .fade-in:nth-child(2) { animation-delay:0.08s; }
@@ -214,9 +252,9 @@ footer { padding:2.2rem 2rem; max-width:1040px; margin:0 auto; border-top:1px so
     <div class="nav-links">
       <a href="#services">Services</a>
       <a href="#engagements">Engagements</a>
-      <a href="#methodology">Methodology</a>
+      <a href="#analysis">Analysis</a>
       <a href="#about">About</a>
-      <a href="#contact" class="btn btn-primary">Request Consultation</a>
+      <a href="#contact" class="btn btn-primary">Assess CMMC Readiness</a>
     </div>
   </div>
 </nav>
@@ -228,10 +266,10 @@ footer { padding:2.2rem 2rem; max-width:1040px; margin:0 auto; border-top:1px so
   <div class="wrap">
     <div class="hero-label fade-in">CMMC &middot; Export Controls &middot; Sanctions Compliance</div>
     <h1 id="hero-heading" class="fade-in">What you need to <em>pass your CMMC assessment</em> and keep your contracts.</h1>
-    <p class="hero-sub fade-in">Fixed-scope CMMC Level 2 readiness assessments for defense contractors that need a clear path to certification, remediation prioritization, and contract continuity. ITAR/EAR and sanctions review integrated when required.</p>
+    <p class="hero-sub fade-in">Fixed-scope CMMC Level 2 readiness assessments for defense contractors requiring a documented path to certification, remediation prioritization, and contract continuity. ITAR/EAR and sanctions review integrated where required.</p>
     <p class="hero-fit fade-in">For defense contractors, biotech firms, advanced technology companies, and outside counsel facing cybersecurity, export-control, or sanctions compliance requirements.</p>
     <div class="hero-ctas fade-in">
-      <a href="#contact" class="btn btn-primary">Request Consultation</a>
+      <a href="#contact" class="btn btn-primary">Assess CMMC Readiness</a>
       <a href="#engagements" class="btn btn-ghost">View Representative Engagements</a>
     </div>
     <div class="proof-strip fade-in">
@@ -243,6 +281,24 @@ footer { padding:2.2rem 2rem; max-width:1040px; margin:0 auto; border-top:1px so
   </div>
 </section>
 
+
+<hr class="divider">
+
+<!-- RISK FRAMING -->
+<section aria-labelledby="risk-heading">
+  <div class="wrap">
+    <div class="risk-frame">
+      <h3 id="risk-heading">CMMC Level 2 Is Now Contract-Gating</h3>
+      <p>Contractors without demonstrable readiness face elevated risk of bid exclusion beginning in the 2026&ndash;2027 acquisition cycle. Phase 1 enforcement is active. C3PAO assessments become mandatory for applicable contracts in November 2026.</p>
+      <ul class="risk-bullets">
+        <li>SPRS score below 88 &rarr; <strong>no conditional certification path</strong></li>
+        <li>No System Security Plan &rarr; <strong>assessment cannot proceed</strong></li>
+        <li>Missing MFA or centralized logging &rarr; <strong>high-probability failure condition</strong></li>
+      </ul>
+      <p style="margin-top:0.8rem; font-size:0.82rem;"><a href="#analysis">See recent analysis: CMMC Level 2 Readiness Risk in the U.S. Defense Industrial Base &rarr;</a></p>
+    </div>
+  </div>
+</section>
 <hr class="divider">
 
 <!-- SERVICES -->
@@ -250,7 +306,7 @@ footer { padding:2.2rem 2rem; max-width:1040px; margin:0 auto; border-top:1px so
   <div class="wrap">
     <div class="sl">Services</div>
     <h2 id="services-heading">What I deliver</h2>
-    <p class="sd">Fixed-scope assessments, retainer-based compliance management, and technical advisory. Final fees depend on scope, document volume, and required turnaround.</p>
+    <p class="sd">Structured readiness, remediation, and advisory engagements for organizations preparing for near-term C3PAO assessment, export-control review, or sanctions program development. Typical CMMC readiness engagements: 4–6 weeks.</p>
     <div class="grid-3">
       <div class="card">
         <div class="tag">Flagship &middot; Entry Engagement</div>
@@ -329,6 +385,27 @@ footer { padding:2.2rem 2rem; max-width:1040px; margin:0 auto; border-top:1px so
   </div>
 </section>
 
+
+<hr class="divider">
+
+<!-- RECENT ANALYSIS -->
+<section id="analysis" aria-labelledby="analysis-heading">
+  <div class="wrap">
+    <div class="sl">Recent Analysis</div>
+    <h2 id="analysis-heading">Published risk assessment</h2>
+    <div class="analysis-card">
+      <h3>CMMC Level 2 Readiness Risk in the U.S. Defense Industrial Base</h3>
+      <div class="analysis-sub">Evidence, Drivers, and a 90-Day Remediation Path &mdash; March 2026</div>
+      <div class="analysis-links">
+        <a href="https://github.com/collingeorge/WP-2026/blob/main/WP-2026-CMMC-READINESS-RISK-ASSESSMENT.pdf" class="btn btn-primary" target="_blank" rel="noopener">Read the Full Analysis</a>
+        <a href="https://github.com/collingeorge/WP-2026" class="btn btn-ghost" target="_blank" rel="noopener">View Publication Repository</a>
+      </div>
+      <div class="finding">A non-trivial proportion of SMB defense contractors may not achieve CMMC Level 2 readiness without structured external remediation. One industry survey reported the average SPRS score among respondents at -12 against a required threshold of 88.</div>
+      <div class="finding">Documentation deficiency, control implementation gaps, and audit preparation failure are assessed as the primary structural drivers of non-readiness. These patterns appear consistent across the DIB.</div>
+      <div class="finding">Contractors entering late 2026 without initiated gap assessment face elevated risk of contract ineligibility during the 2026&ndash;2027 acquisition cycle.</div>
+    </div>
+  </div>
+</section>
 <hr class="divider">
 
 <!-- WHO I HELP -->
@@ -365,6 +442,26 @@ footer { padding:2.2rem 2rem; max-width:1040px; margin:0 auto; border-top:1px so
   </div>
 </section>
 
+
+<hr class="divider">
+
+<!-- WHAT FAILS ASSESSMENTS -->
+<section id="failures" aria-labelledby="fail-heading">
+  <div class="wrap">
+    <div class="sl">Assessment Risk</div>
+    <h2 id="fail-heading">What fails CMMC assessments</h2>
+    <p class="sd">Based on publicly available C3PAO guidance and practitioner reporting, the following conditions are assessed as likely to produce assessment failure or conditional denial.</p>
+    <ul class="fail-list">
+      <li>No current, tailored System Security Plan (SSP) &mdash; assessment cannot proceed without one</li>
+      <li>No multi-factor authentication for remote or privileged access &mdash; critical 5-point control deficiency</li>
+      <li>No centralized audit logging or evidence of log review &mdash; Audit and Accountability controls cannot be demonstrated</li>
+      <li>Evidence not collected, organized, or retrievable &mdash; implemented controls treated as not implemented for scoring</li>
+      <li>CUI boundary not defined or documented &mdash; assessment scope cannot be established</li>
+      <li>SPRS score below 88 with no viable POA&amp;M path &mdash; no route to conditional certification</li>
+    </ul>
+    <p class="fail-close">Presence of any single condition above is consistent with elevated risk of assessment failure. Presence of multiple conditions simultaneously is consistent with high probability of assessment failure.</p>
+  </div>
+</section>
 <hr class="divider">
 
 <!-- METHODOLOGY / PROOF -->
@@ -443,13 +540,58 @@ footer { padding:2.2rem 2rem; max-width:1040px; margin:0 auto; border-top:1px so
   </div>
 </section>
 
+
+<hr class="divider">
+
+<!-- READINESS DIAGNOSTIC -->
+<section id="diagnostic" aria-labelledby="diag-heading">
+  <div class="wrap">
+    <div class="sl">Entry Point</div>
+    <h2 id="diag-heading">Initial readiness diagnostic</h2>
+    <div class="grid-2">
+      <div class="diag-card">
+        <h3>Structured 10&ndash;15 minute diagnostic</h3>
+        <p>Estimate your current readiness posture and identify primary failure risks before committing to a full engagement. Designed for organizations preparing for near-term CMMC assessment.</p>
+        <ul class="diag-outputs">
+          <li>Estimated SPRS range</li>
+          <li>Key control gaps</li>
+          <li>Assessment readiness risk level</li>
+          <li>Recommended next steps</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Assess CMMC Readiness</a>
+      </div>
+      <div>
+        <div class="sl" style="margin-top:0;">Engagement Model</div>
+        <div class="eng-steps">
+          <div class="eng-step">
+            <div class="eng-step-num">01</div>
+            <h4>Gap Assessment</h4>
+          </div>
+          <div class="eng-step">
+            <div class="eng-step-num">02</div>
+            <h4>Control Remediation</h4>
+          </div>
+          <div class="eng-step">
+            <div class="eng-step-num">03</div>
+            <h4>Documentation &amp; Evidence</h4>
+          </div>
+          <div class="eng-step">
+            <div class="eng-step-num">04</div>
+            <h4>Assessment Readiness</h4>
+          </div>
+        </div>
+        <p style="font-size:0.82rem; color:var(--tx-3); margin-top:1rem; font-weight:300; line-height:1.7;">Typical engagements: 4&ndash;6 weeks. Structured around gap assessment, remediation prioritization, and evidence readiness. Designed for organizations preparing for near-term C3PAO assessment.</p>
+      </div>
+    </div>
+  </div>
+</section>
 <hr class="divider">
 
 <!-- CONTACT -->
 <section id="contact" aria-labelledby="contact-heading">
   <div class="wrap">
     <div class="sl">Contact</div>
-    <h2 id="contact-heading">Request a confidential consultation</h2>
+    <h2 id="contact-heading">Assess your CMMC readiness</h2>
     <div class="trust-band">
       <span class="trust-item"><span class="trust-check">&#10003;</span> Fixed-fee scoping</span>
       <span class="trust-item"><span class="trust-check">&#10003;</span> Two-business-day response</span>
@@ -459,8 +601,8 @@ footer { padding:2.2rem 2rem; max-width:1040px; margin:0 auto; border-top:1px so
     <div class="contact-grid">
       <div class="cblock">
         <h3>Engagement inquiry</h3>
-        <p>Describe your compliance requirement. I will respond within two business days with an initial assessment of scope, timeline, and fit. Initial scoping call at no charge.</p>
-        <form class="cform" action="https://formspree.io/f/mojpwljz" method="POST">
+        <p>Use the form below to request a structured readiness diagnostic or scoped assessment discussion. Response within two business days. Initial scoping call at no charge.</p>
+        <form class="cform" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
           <label for="f-name">Name</label>
           <input type="text" id="f-name" name="name" required autocomplete="name">
           <label for="f-org">Organization</label>
@@ -482,7 +624,7 @@ footer { padding:2.2rem 2rem; max-width:1040px; margin:0 auto; border-top:1px so
           <textarea id="f-details" name="details" rows="4" placeholder="Timeline, scope, or questions"></textarea>
           <!-- honeypot -->
           <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <button type="submit" class="btn btn-primary mt-sm">Request Confidential Consultation</button>
+          <button type="submit" class="btn btn-primary mt-sm">Request Readiness Assessment</button>
         </form>
         <div class="intake-notice">
           <strong>Important:</strong> Do not submit classified, export-controlled, privileged, or otherwise restricted information through this form. Limit submissions to high-level scoping information. Submission of this form does not create a consulting engagement, confidentiality obligation, or attorney-client relationship absent a signed engagement agreement.
